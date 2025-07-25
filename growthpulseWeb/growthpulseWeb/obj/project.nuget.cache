@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "SCf8NR3Q0Xy2m2mHB1vLN9zWDk3/9nZvbPHz76N0pzczhGEdTrJma+JYlku2SxbH/KyBMWEB3iuwGHQAAIv4zQ==",
+=======
   "dgSpecHash": "gf35zWo/Nf+ass4CUEn8447niLuZ6J5hp4/ByK0gzHV0Tj1ackqIMTQUD1M+hVeIQ8CQjX6EB2LvUQTWQYWoJw==",
+>>>>>>> 6e93cf104e50762c98e6ecb75c0815e460bed458
   "success": true,
   "projectFilePath": "C:\\ProjectsP\\samplegrowthpulse\\growthpulseWeb\\growthpulseWeb\\growthpulseWeb.csproj",
   "expectedPackageFiles": [],
