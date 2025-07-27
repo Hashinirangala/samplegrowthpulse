@@ -1,0 +1,7 @@
+C:\ProjectsP\samplegrowthpulse\growthpulseWeb\growthpulseWeb\obj\Debug\net6.0\growthpulseWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjectsP\samplegrowthpulse\growthpulseWeb\growthpulseWeb\obj\Debug\net6.0\growthpulseWeb.AssemblyInfoInputs.cache
+C:\ProjectsP\samplegrowthpulse\growthpulseWeb\growthpulseWeb\obj\Debug\net6.0\growthpulseWeb.AssemblyInfo.cs
+C:\ProjectsP\samplegrowthpulse\growthpulseWeb\growthpulseWeb\obj\Debug\net6.0\growthpulseWeb.csproj.CoreCompileInputs.cache
+C:\ProjectsP\samplegrowthpulse\growthpulseWeb\growthpulseWeb\obj\Debug\net6.0\growthpulseWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\ProjectsP\samplegrowthpulse\growthpulseWeb\growthpulseWeb\obj\Debug\net6.0\growthpulseWeb.RazorAssemblyInfo.cache
+C:\ProjectsP\samplegrowthpulse\growthpulseWeb\growthpulseWeb\obj\Debug\net6.0\growthpulseWeb.RazorAssemblyInfo.cs
