@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nJLSUCDw5+6RhWQRDChFgJP/lPHTul00sTLIdIH7Z24tWW6LxC6sD9ps3NVxQYTT0swc8q0fID/Ag8WN41fsrQ==",
+  "dgSpecHash": "aMT800G4UoU8I8/7166PkIpL9Su5heMPy6MRcD7V0OyaqVX5u0QWtUxYqsxm+nwzo2a9NHfCMwRCCbrN21mYMw==",
   "success": true,
   "projectFilePath": "C:\\ProjectsP\\samplegrowthpulse\\growthpulseWeb\\growthpulseWeb\\growthpulseWeb.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\rdialk\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
