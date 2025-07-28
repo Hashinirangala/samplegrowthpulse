@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("growthpulseWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fd79be454a81ffe020f4ab784c8ea08496d0712")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c01d050f3f3635046cdf7356966afb8c02c9e709")]
 [assembly: System.Reflection.AssemblyProductAttribute("growthpulseWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("growthpulseWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
