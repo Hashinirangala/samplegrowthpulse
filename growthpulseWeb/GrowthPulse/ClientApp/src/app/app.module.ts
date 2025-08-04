@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
+import { GoalDetailFormComponent } from './goal-details/goal-detail-form/goal-detail-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GoalDetailsComponent } from './goal-details/goal-details.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    GoalDetailsComponent
+    GoalDetailsComponent,
+    GoalDetailFormComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
