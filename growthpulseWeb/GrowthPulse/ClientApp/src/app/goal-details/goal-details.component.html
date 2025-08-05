@@ -3,6 +3,17 @@
         <app-goal-detail-form></app-goal-detail-form>
     </div>
     <div class="col-6">
-        list goal details
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 round-3"  *ngFor="let gd of service.list">
+                <div class="flex-grow-1 mouse-hover">
+                    <div class="fw-bold">{{gd.goalOwnerEmail}}</div>
+                    <div>{{gd.goalName}}</div>
+                    <div class="fw-bold">{{gd.goalSetDate}}</div>
+                </div>
+                <span class="text-secondary">
+                 <i class="fa-solid fa-trash-can fa-lg mouse-hover"></i>   
+                </span>
+            </li>
+        </ul>
     </div>
 </div>

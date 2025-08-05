@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GoalDetailService } from '../shared/goal-detail.service';
 
 @Component({
   selector: 'app-goal-details',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoalDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service : GoalDetailService) { }
 
   ngOnInit(): void {
+    this.service.refreshList();
   }
 
 }
