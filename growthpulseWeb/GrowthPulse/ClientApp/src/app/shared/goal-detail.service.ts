@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class GoalDetailService {
 
-  url: string = environment.apiBaseUrl + '/GoalDetails';
+  url: string = environment.apiBaseUrl + '/GoalDetail';
 
   constructor(private http: HttpClient) { }
 
