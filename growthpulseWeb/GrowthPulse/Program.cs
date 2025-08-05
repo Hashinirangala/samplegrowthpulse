@@ -1,6 +1,5 @@
-using Microsoft.EntityFrameworkCore;
-
 using GrowthPulse.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,22 +11,28 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.UseCors(options =>
+options.WithOrigins("https://localhost:44437")
+.AllowAnyHeader()
+.AllowAnyMethod());
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+// Enable attribute routing for API controllers
+app.MapControllers();
 
+// Existing MVC route mapping for views and pages
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
 
-app.MapFallbackToFile("index.html");;
+app.MapFallbackToFile("index.html");
 
 app.Run();
