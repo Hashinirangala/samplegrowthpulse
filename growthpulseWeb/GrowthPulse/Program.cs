@@ -16,6 +16,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseCors(options =>
+options.WithOrigins("https://localhost:44437")
+.AllowAnyHeader()
+.AllowAnyMethod());
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
