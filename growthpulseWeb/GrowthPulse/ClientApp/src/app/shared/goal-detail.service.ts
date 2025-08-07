@@ -10,6 +10,7 @@ export class GoalDetailService {
 
   url: string = environment.apiBaseUrl + '/GoalDetail';
   list: GoalDetail[] = [];
+  formData: GoalDetail = new GoalDetail();
 
   constructor(private http: HttpClient) { }
 

@@ -1,1 +1,27 @@
-<p>goal-detail-form works!</p>
+<form>
+    <input type="hidden" name="goalDetailId" [value]="service.formData.goalDetailId" />
+    <div class="mb-3">
+        <label>Goal Owner Email</label>
+        <input class="form-control form-control-lg" 
+        placeholder="Email" 
+        #goalOwnerEmail="ngModel" name="goalOwnerEmail"
+        [(ngModel)]="service.formData.goalOwnerEmail" />
+    </div>
+        <div class="mb-3">
+        <label>Goal</label>
+        <input class="form-control form-control-lg" 
+        placeholder="Goal name" 
+        #goalName="ngModel" name="goalName"
+        [(ngModel)]="service.formData.goalName" />
+    </div>
+        <div class="mb-3">
+        <label>Goal Set Date</label>
+        <input class="form-control form-control-lg" 
+        placeholder="DD/MM/YYYY" 
+        #goalSetDate="ngModel" name="goalSetDate"
+        [(ngModel)]="service.formData.goalSetDate" />
+    </div>
+    <div class="d-grid">
+          <button class="btn btn-lg btn-success" type="submit">Submit</button>
+    </div>
+</form>
