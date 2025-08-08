@@ -24,4 +24,8 @@ export class GoalDetailService {
       error: err => { console.log(err); }
     })
   }
+
+  postGoalDetail() {
+    return this.http.post(this.url, this.formData);
+  }
 }

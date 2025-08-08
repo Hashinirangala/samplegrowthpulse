@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { GoalDetailService } from 'src/app/shared/goal-detail.service';
 
 @Component({
@@ -11,6 +12,10 @@ export class GoalDetailFormComponent implements OnInit {
   constructor(public service : GoalDetailService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form:NgForm) {
+
   }
 
 }
