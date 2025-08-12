@@ -77,7 +77,7 @@ namespace GrowthPulse.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(await _context.GoalDetails.ToListAsync());
         }
 
         // POST: api/GoalDetail
@@ -92,7 +92,7 @@ namespace GrowthPulse.Controllers
             _context.GoalDetails.Add(goalDetail);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGoalDetail", new { id = goalDetail.GoalDetailId }, goalDetail);
+            return Ok(await _context.GoalDetails.ToListAsync());
         }
 
         // DELETE: api/GoalDetail/5
@@ -112,7 +112,7 @@ namespace GrowthPulse.Controllers
             _context.GoalDetails.Remove(goalDetail);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(await _context.GoalDetails.ToListAsync()); ;
         }
 
         private bool GoalDetailExists(int id)
