@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { GoalDetail } from './goal-detail.model';
+import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +28,10 @@ export class GoalDetailService {
 
   postGoalDetail() {
     return this.http.post(this.url, this.formData);
+  }
+
+  resetForm(form: NgForm) {
+    form.form.reset();
+    this.formData = new GoalDetail();
   }
 }

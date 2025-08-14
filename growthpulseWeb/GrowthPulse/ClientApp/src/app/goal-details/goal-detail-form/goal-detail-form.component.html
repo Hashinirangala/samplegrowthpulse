@@ -1,4 +1,4 @@
-<form  #form="ngForm" (submit) = "onSubmit()">
+<form  #form="ngForm" (submit) = "onSubmit(form)" class="p-3">
     <input type="hidden" name="goalDetailId" [value]="service.formData.goalDetailId" />
     <div class="mb-3">
         <label>Goal Owner Email</label>

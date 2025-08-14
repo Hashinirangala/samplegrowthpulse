@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GoalDetailService } from '../shared/goal-detail.service';
 import { NgForm } from '@angular/forms';
-import { error } from 'console';
 
 @Component({
   selector: 'app-goal-details',
@@ -15,15 +14,5 @@ export class GoalDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.service.refreshList();
   }
-
-  onSubmit(form: NgForm) {
-  this.service.postGoalDetail()
-  .subscribe({
-    next: res => {
-      
-      error: err{ console.log(err)}
-  })
-
-}
 
 }
