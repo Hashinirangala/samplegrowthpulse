@@ -15,7 +15,7 @@ export class GoalDetailFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form: NgForm) {
-
+   this.service.formSubmitted = true;
    if(form.valid){
      this.service.postGoalDetail()
     .subscribe({

@@ -12,6 +12,7 @@ export class GoalDetailService {
   url: string = environment.apiBaseUrl + '/GoalDetail';
   list: GoalDetail[] = [];
   formData: GoalDetail = new GoalDetail();
+  formSubmitted: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -33,5 +34,6 @@ export class GoalDetailService {
   resetForm(form: NgForm) {
     form.form.reset();
     this.formData = new GoalDetail();
+    this.formSubmitted = false;
   }
 }
