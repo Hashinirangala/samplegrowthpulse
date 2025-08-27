@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GoalDetailService } from '../shared/goal-detail.service';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-goal-details',
