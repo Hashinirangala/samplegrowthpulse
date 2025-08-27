@@ -1,25 +1,25 @@
-<form  #form="ngForm" (submit) = "onSubmit(form)" class="p-3">
+<form  #form="ngForm" (submit) = "onSubmit(form)" [class.submitted]="service.formSubmitted" novalidate autocomplete="off" class="p-3">
     <input type="hidden" name="goalDetailId" [value]="service.formData.goalDetailId" />
     <div class="mb-3">
         <label>Goal Owner Email</label>
         <input class="form-control form-control-lg" 
         placeholder="Email" 
         #goalOwnerEmail="ngModel" name="goalOwnerEmail"
-        [(ngModel)]="service.formData.goalOwnerEmail" />
+        [(ngModel)]="service.formData.goalOwnerEmail" required/>
     </div>
         <div class="mb-3">
         <label>Goal</label>
         <input class="form-control form-control-lg" 
         placeholder="Goal name" 
         #goalName="ngModel" name="goalName"
-        [(ngModel)]="service.formData.goalName" />
+        [(ngModel)]="service.formData.goalName" required/>
     </div>
         <div class="mb-3">
         <label>Goal Set Date</label>
         <input class="form-control form-control-lg" 
-        placeholder="DD/MM/YYYY" 
+        placeholder="DD/MM" 
         #goalSetDate="ngModel" name="goalSetDate"
-        [(ngModel)]="service.formData.goalSetDate" />
+        [(ngModel)]="service.formData.goalSetDate" required minlength="5" maxlength="5"/>
     </div>
     <div class="d-grid">
           <button class="btn btn-lg btn-success" type="submit">Submit</button>
