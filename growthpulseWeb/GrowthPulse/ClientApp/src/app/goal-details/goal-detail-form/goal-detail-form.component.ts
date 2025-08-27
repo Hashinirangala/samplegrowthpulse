@@ -15,7 +15,9 @@ export class GoalDetailFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form: NgForm) {
-    this.service.postGoalDetail()
+
+   if(form.valid){
+     this.service.postGoalDetail()
     .subscribe({
       next: res => {
            this.service.list = res as GoalDetail[];
@@ -24,5 +26,6 @@ export class GoalDetailFormComponent implements OnInit {
         },
       error: err => {console.log(err) }
     });
+   }
   }
 }

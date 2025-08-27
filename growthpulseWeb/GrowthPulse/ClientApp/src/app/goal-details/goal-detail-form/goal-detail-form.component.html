@@ -5,21 +5,21 @@
         <input class="form-control form-control-lg" 
         placeholder="Email" 
         #goalOwnerEmail="ngModel" name="goalOwnerEmail"
-        [(ngModel)]="service.formData.goalOwnerEmail" />
+        [(ngModel)]="service.formData.goalOwnerEmail" required/>
     </div>
         <div class="mb-3">
         <label>Goal</label>
         <input class="form-control form-control-lg" 
         placeholder="Goal name" 
         #goalName="ngModel" name="goalName"
-        [(ngModel)]="service.formData.goalName" />
+        [(ngModel)]="service.formData.goalName" required/>
     </div>
         <div class="mb-3">
         <label>Goal Set Date</label>
         <input class="form-control form-control-lg" 
         placeholder="DD/MM/YYYY" 
         #goalSetDate="ngModel" name="goalSetDate"
-        [(ngModel)]="service.formData.goalSetDate" />
+        [(ngModel)]="service.formData.goalSetDate" required minlength="5" maxlength="5"/>
     </div>
     <div class="d-grid">
           <button class="btn btn-lg btn-success" type="submit">Submit</button>
