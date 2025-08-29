@@ -35,6 +35,12 @@ export class GoalDetailService {
     return this.http.put(this.url + '/' + this.formData.goalDetailId, this.formData);
   }
 
+  deleteGoalDetail(id: number) {
+    return this.http.delete(this.url + '/' + id);
+  }
+
+
+
   resetForm(form: NgForm) {
     form.form.reset();
     this.formData = new GoalDetail();
