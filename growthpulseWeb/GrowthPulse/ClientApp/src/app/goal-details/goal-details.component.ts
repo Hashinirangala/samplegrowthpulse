@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GoalDetailService } from '../shared/goal-detail.service';
+import { GoalDetail } from '../shared/goal-detail.model';
 
 @Component({
   selector: 'app-goal-details',
@@ -12,6 +13,10 @@ export class GoalDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.refreshList();
+  }
+
+  populateForm(selectedRecord: GoalDetail){
+    this.service.formData = Object.assign({},selectedRecord);
   }
 
 }
