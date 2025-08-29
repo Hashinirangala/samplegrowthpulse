@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GoalDetailService } from '../shared/goal-detail.service';
 import { GoalDetail } from '../shared/goal-detail.model';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-goal-details',
@@ -9,7 +10,7 @@ import { GoalDetail } from '../shared/goal-detail.model';
 })
 export class GoalDetailsComponent implements OnInit {
 
-  constructor(public service : GoalDetailService) { }
+  constructor(public service : GoalDetailService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.service.refreshList();
@@ -17,6 +18,20 @@ export class GoalDetailsComponent implements OnInit {
 
   populateForm(selectedRecord: GoalDetail){
     this.service.formData = Object.assign({},selectedRecord);
+  }
+
+  onDelete(id: number){
+    if(confirm('Are you sure to delete this record ?')){
+    this.service.deleteGoalDetail(id)
+     .subscribe({
+      next: res => {
+           this.service.list = res as GoalDetail[];
+           this.toastr.error('Deleted successfully', 'Goal Detail Register');
+        },
+      error: err => {console.log(err) }
+    });
+  }
+
   }
 
 }

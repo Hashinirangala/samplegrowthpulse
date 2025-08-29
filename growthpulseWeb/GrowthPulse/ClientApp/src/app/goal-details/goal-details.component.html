@@ -12,7 +12,8 @@
                     <div class="fw-bold">{{gd.goalSetDate}}</div>
                 </div>
                 <span class="text-secondary">
-                 <i class="fa-solid fa-trash-can fa-lg mouse-hover"></i>   
+                 <i class="fa-solid fa-trash-can fa-lg mouse-hover"
+                 (click)="onDelete(gd.goalDetailId)"></i>   
                 </span>
             </li>
         </ul>
