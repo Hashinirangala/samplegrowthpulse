@@ -17,6 +17,15 @@ export class GoalDetailFormComponent implements OnInit {
   onSubmit(form: NgForm) {
    this.service.formSubmitted = true;
    if(form.valid){
+    if(this.service.formData.goalDetailId == 0){
+      this.insertRecord(form);
+    }else{
+      this.updateRecord(form);
+    }
+   }
+  }
+
+  insertRecord(form: NgForm) {
      this.service.postGoalDetail()
     .subscribe({
       next: res => {
@@ -26,6 +35,18 @@ export class GoalDetailFormComponent implements OnInit {
         },
       error: err => {console.log(err) }
     });
-   }
+  }
+
+  updateRecord(form: NgForm) {
+
+  this.service.putGoalDetail()
+    .subscribe({
+      next: res => {
+           this.service.list = res as GoalDetail[];
+           this.service.resetForm(form);
+           this.toastr.info('Updated successfully', 'Goal Detail Register');
+        },
+      error: err => {console.log(err) }
+    });
   }
 }

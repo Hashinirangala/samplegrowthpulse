@@ -31,6 +31,10 @@ export class GoalDetailService {
     return this.http.post(this.url, this.formData);
   }
 
+  putGoalDetail() {
+    return this.http.put(this.url + '/' + this.formData.goalDetailId, this.formData);
+  }
+
   resetForm(form: NgForm) {
     form.form.reset();
     this.formData = new GoalDetail();
