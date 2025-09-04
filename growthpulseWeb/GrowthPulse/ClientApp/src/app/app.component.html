@@ -5,6 +5,8 @@
     <router-outlet></router-outlet>
     <div class="row">
       <div class="clo-8 offset-2">
+        <button (click)="setGoals()" class="btn-primary">Set your goals</button>
+        <router-outlet name="goal-details"></router-outlet>
         <app-goal-details></app-goal-details>
       </div>
     </div>
