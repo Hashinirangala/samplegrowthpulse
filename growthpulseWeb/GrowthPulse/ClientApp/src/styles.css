@@ -18,3 +18,9 @@ code {
 .mouse-hover:hover {
   cursor: pointer;
 }
+
+.intro {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 16px;
+}
